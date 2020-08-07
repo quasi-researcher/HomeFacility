@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HomeFacility.PageSettings">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame Margin="10,5,10,5" BackgroundColor="#26495C">
+                    <Label Text="Настройки приложения" HorizontalTextAlignment="Center" TextColor="White" FontSize="15"/>
+                </Frame>
+                <Frame Margin="10,5,10,5" BackgroundColor="#C66B3D">
+                    <StackLayout>
+                        <Label Text="Настроить напоминание" HorizontalTextAlignment="Start"/>
+                        <Entry x:Name="notify_at" Text="2020 08 07 17 10 00"  Keyboard="Numeric"/>
+                        <Button x:Name="notify_button" Text="Сохранить" Clicked="notify_Clicked" BackgroundColor="#C4A35A"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10,5,10,5" BackgroundColor="#C66B3D">
+                    <StackLayout>
+                        <Label Text="Телефон диспечера УК Андромеда" HorizontalTextAlignment="Start"/>
+                        <Entry x:Name="phone_disp" Text="xxx"  Keyboard="Telephone"/>
+                        <Button x:Name="new_phone" Text="Сохранить" Clicked="new_phone_Clicked" BackgroundColor="#C4A35A"/>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10,5,10,5" BackgroundColor="#C66B3D">
+                    <StackLayout>
+                        <Label Text="Доступ в личный кабинет МП ТЭКК" HorizontalTextAlignment="Start"/>
+                        <Label Text="Логин" HorizontalTextAlignment="Start"/>
+                        <Entry x:Name="eis_login" Text="user@email.ru"/>
+                        <Label Text="Пароль" HorizontalTextAlignment="Start"/>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="eis_pwd" Text="******" IsPassword="True" Grid.Row="0" Grid.Column="0"/>
+                            <Image Source="eye.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Fill">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ShowPwdEis" NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                        <Button x:Name="eis_cred" Text="Сохранить" Clicked="eis_cred_Clicked" BackgroundColor="#C4A35A"/>
+                        
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="10,5,10,5" BackgroundColor="#C66B3D">
+                    <StackLayout>
+                        <Label Text="Доступ в личный кабинет РКС-Энерго" HorizontalTextAlignment="Start"/>
+                        <Label Text="Логин" HorizontalTextAlignment="Start"/>
+                        <Entry x:Name="rks_login" Text="user@email.ru"/>
+                        <Label Text="Пароль" HorizontalTextAlignment="Start"/>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="0.2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Entry x:Name="rks_pwd" Text="******" IsPassword="True" Grid.Row="0" Grid.Column="0"/>
+                            <Image Source="eye.png" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Fill">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="ShowPwdRks" NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                        <Button x:Name="rks_cred" Text="Спасти и Сохранить" Clicked="rks_cred_Clicked" BackgroundColor="#C4A35A"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

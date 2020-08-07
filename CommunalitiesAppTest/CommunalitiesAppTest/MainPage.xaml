@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HomeFacility.MainPage"
+             Title="Прекрасное Токсово будущего">
+    
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Name="Settings" Text="Settings" Priority="0" Order="Secondary" Clicked="settings_clicked"/>
+            <ToolbarItem Name="About" Text="About" Priority="1" Order="Secondary" Clicked="about_clicked"/>
+        </ContentPage.ToolbarItems>
+    <ScrollView>
+        <StackLayout>
+
+            <Frame Margin="10,5,10,5" BackgroundColor="#26495C">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions> 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="home_ico.png" WidthRequest="150" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label Text="ТСЖ Дом на Коротком" Grid.Row="0"  Grid.Column="1"  HorizontalTextAlignment="Start" Style="{DynamicResource BodyStyle}" FontSize="15" TextColor="White" VerticalTextAlignment="Center"/>
+                </Grid>
+            </Frame>
+            <Frame Margin="10,1,10,5"  BackgroundColor="#E5E5DC">
+                <Label VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Margin="5,2,5,2" Padding="0,1,0,1" FontSize="15">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Как сдать показания: &#10;" FontAttributes="Bold" FontSize="18" TextColor="DarkSlateGray"/>
+                            <Span Text=" &#10;" FontSize="5"/>
+                            <Span Text="&#8226; ГВС и газ по телефону диспечеру УК Андромеда до 20-го числа &#10;" FontSize="18" TextColor="DarkSlateGray"/>
+                            <Span Text=" &#10;" FontSize="5"/>
+                            <Span Text="&#8226; ХВС и ГВС в МПТЭКК через личный кабинет &#10;" FontSize="18" TextColor="DarkSlateGray"/>
+                            <Span Text=" &#10;" FontSize="5"/>
+                            <Span Text="&#8226; электроэнергия в РКС Энерго через личный кабинет до 25-го числа" FontSize="18" TextColor="DarkSlateGray"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+            <Frame Margin="10,5,10,5" BackgroundColor="#C66B3D">
+            <StackLayout>
+            <Label Text="УК Андромеда. ГВС и газ"/>
+                    <Button x:Name="btnCall" Text="позвонить диспечеру" Clicked="btnCall_Click" BackgroundColor="#C4A35A"/>
+            </StackLayout>
+        </Frame>
+        <Frame Margin="10,5,10,5" BackgroundColor="#C66B3D">
+            <StackLayout>
+                <Label Text="МП ТЭКК. ХВС и ГВС"/>
+                <Button x:Name="btnToLK" Text="перейти в личный кабинет" Clicked="btnToLK_Click" BackgroundColor="#C4A35A"/>
+            </StackLayout>
+        </Frame>
+            <Frame Margin="10,5,10,5" BackgroundColor="#C66B3D">
+                <StackLayout>
+                <Label Text="РКС Энерго. Электроэнергия"/>
+                    <Button x:Name="btnEmail" Text="перейти в личный кабинет" Clicked="btnEmail_Click" BackgroundColor="#C4A35A"/>
+                </StackLayout>
+            </Frame>
+        <!--<Entry x:Name="fuck" Keyboard="Numeric"/>-->
+    </StackLayout> 
+    </ScrollView>
+    
+
+</ContentPage>
